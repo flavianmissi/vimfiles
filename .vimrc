@@ -11,7 +11,7 @@ call pathogen#infect()
 set rtp+=$GOROOT/misc/vim
 
 syntax on
-filetype on
+"filetype on
 filetype indent on
 filetype plugin on
 
@@ -42,6 +42,9 @@ set wildmenu
 set wildmode=list:longest
 set cursorline
 
+"autocmd FileType * set noexpandtab
+"autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab|set softtabstop=4|set smartindent|set smarttab
+
 " read open files again when changed outside Vim
 set autoread
 
@@ -71,9 +74,10 @@ function TrimWhiteSpaces()
     ''
 :endfunction
 
+"Colorscheme
+colorscheme darkblue
+
 if has("gui_running")
-    "Colorscheme
-    colorscheme kib_darktango
 
     "guifont
     set guifont=Monaco:h12
