@@ -1,11 +1,42 @@
-"Setting VIMHOME
+set nocompatible
+filetype off
+"Set
 let $VIMHOME = $HOME."/.vim"
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/syntastic'
+"Plugin 'bling/vim-airline'
+Plugin 'bling/vim-airline/tree/v0.7'
+Plugin 'pangloss/vim-javascript'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to
+" auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 "Setting PYTHONPATH
 let $PYTHONPATH .= ":".$VIMHOME."/python"
 
 "load bundle plugins
 call pathogen#infect()
+
+"Vundle
 
 "add go vim plugins
 set rtp+=$GOROOT/misc/vim
@@ -18,6 +49,9 @@ filetype plugin on
 "Hidden mode
 set hidden
 set number
+
+let g:ctrlp_map = '<c-t>'
+let g:ctrlp_cmd = 'CtrlT'
 
 "Bad whitespaces
 autocmd BufEnter * highlight BadWhitespace ctermbg=red guibg=red
@@ -75,7 +109,7 @@ function TrimWhiteSpaces()
 :endfunction
 
 "Colorscheme
-colorscheme darkblue
+"colorscheme darkblue
 
 if has("gui_running")
 
