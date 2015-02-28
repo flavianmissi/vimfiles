@@ -9,12 +9,18 @@ call vundle#begin()
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
-"Plugin 'bling/vim-airline'
-Plugin 'bling/vim-airline/tree/v0.7'
 Plugin 'pangloss/vim-javascript'
+Plugin 'kien/ctrlp.vim'
+Plugin 'othree/html5.vim'
+Plugin 'klen/python-mode'
+Plugin 'elzr/vim-json'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+let g:ctrlp_map = '<c-t>'
+let g:ctrlp_cmd = 'CtrlP'
+
 
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -49,9 +55,6 @@ filetype plugin on
 "Hidden mode
 set hidden
 set number
-
-let g:ctrlp_map = '<c-t>'
-let g:ctrlp_cmd = 'CtrlT'
 
 "Bad whitespaces
 autocmd BufEnter * highlight BadWhitespace ctermbg=red guibg=red
