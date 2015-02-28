@@ -112,7 +112,7 @@ function TrimWhiteSpaces()
 :endfunction
 
 "Colorscheme
-"colorscheme darkblue
+colorscheme delek
 
 if has("gui_running")
 
