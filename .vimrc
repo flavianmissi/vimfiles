@@ -11,8 +11,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kien/ctrlp.vim'
-Plugin 'othree/html5.vim'
-Plugin 'klen/python-mode'
+" Plugin 'klen/python-mode'
 Plugin 'elzr/vim-json'
 
 call vundle#end()            " required
