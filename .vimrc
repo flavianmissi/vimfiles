@@ -13,6 +13,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'kien/ctrlp.vim'
 " Plugin 'klen/python-mode'
 Plugin 'elzr/vim-json'
+Plugin 'powerline/powerline'
+Plugin 'fatih/vim-go'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -111,10 +113,11 @@ function TrimWhiteSpaces()
 :endfunction
 
 "Colorscheme
-colorscheme delek
+set background=dark
 
 if has("gui_running")
 
+    colorscheme macvim
     "guifont
     set guifont=Monaco:h12
 
